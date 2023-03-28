@@ -10,9 +10,6 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
       "tsoa": [
         "node_modules/tsoa/dist"
       ],
@@ -28,9 +25,4 @@
   "exclude": [
     "node_modules"
   ],
-  "ts-node": {
-    "require": [
-      "tsconfig-paths/register"
-    ]
-  }
 }

@@ -1,10 +1,4 @@
 {
   "extends": "./tsconfig",
-  "compilerOptions": {
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-    }
-  }
+  "compilerOptions": {}
 }

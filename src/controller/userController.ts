@@ -9,8 +9,8 @@ import {
   SuccessResponse,
 } from "tsoa";
 
-import { User } from "@/schema/userSchema.js";
-import { UserCreationParams, UsersService } from "@/service/userService.js";
+import { User } from "../schema/userSchema.js";
+import { UserCreationParams, UsersService } from "../service/userService.js";
 
 @Route("users")
 export class UsersController extends Controller {
