@@ -1,0 +1,37 @@
+{
+  "entryFile": "src/app.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": [
+    "src/controller/*Controller.ts"
+  ],
+  "spec": {
+    "outputDirectory": "src/tsoa",
+    "specVersion": 3,
+    "basePath": "api/v1",
+    "tags": [],
+    "contact": {
+      "email": "louisandrew3@gmail.com",
+      "name": "Louis Andrew",
+      "url": "https://louis-andrew.com"
+    }
+  },
+  "routes": {
+    "routesDir": "src/tsoa",
+    "basePath": "api/v1",
+    "esm": true
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "tsoa": [
+        "node_modules/tsoa/dist"
+      ],
+      "tsoa/": [
+        "node_modules/tsoa/dist/"
+      ]
+    }
+  }
+}

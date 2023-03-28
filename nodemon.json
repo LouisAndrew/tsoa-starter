@@ -1,0 +1,10 @@
+{
+  "exec": "ts-node-esm ./src/main.ts",
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "src/tsoa/*"
+  ],
+  "ext": "ts"
+}
