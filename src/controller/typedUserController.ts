@@ -6,18 +6,18 @@ import {
   Post,
   Query,
   Res,
-  Response,
   Route,
   SuccessResponse,
+  Tags,
   TsoaResponse,
 } from "tsoa";
 
-import { User } from "../schema/userSchema.js";
+import { ZUserSchema as User, zUserSchema } from "../schema/userSchema.js";
 import { UserCreationParams, usersService } from "../service/userService.js";
-import { ValidateErrorJSON } from "../type.js";
 
-@Route("users")
-export class UsersController extends Controller {
+@Tags("zod")
+@Route("typed-users")
+export class TypedUsersController extends Controller {
   @SuccessResponse("200", "User!!!!")
   @Get("{userId}")
   public async getUser(
@@ -41,12 +41,22 @@ export class UsersController extends Controller {
     return usersService.get(userId, name);
   }
 
-  @Response<ValidateErrorJSON>(422, "Validation Failed")
   @SuccessResponse("201", "Created") // Custom success response
   @Post()
   public async createUser(
-    @Body() requestBody: UserCreationParams
+    @Body() requestBody: UserCreationParams,
+    /**
+     * Hello mom
+     */
+    @Res()
+    invalidResponse: TsoaResponse<422, { error: any }>
   ): Promise<User> {
+    const parseResult = zUserSchema.safeParse(requestBody);
+    if (!parseResult.success) {
+      this.setStatus(422);
+      return invalidResponse(422, { error: parseResult.error });
+    }
+
     this.setStatus(201); // set return status 201
     const user = usersService.create(requestBody);
     return user;

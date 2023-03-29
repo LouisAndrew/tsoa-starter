@@ -1,5 +1,5 @@
 {
-  "exec": "ts-node-esm ./src/main.ts",
+  "exec": "ts-node --esm ./src/main.ts",
   "watch": [
     "src"
   ],

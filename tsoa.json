@@ -8,7 +8,9 @@
     "outputDirectory": "src/tsoa",
     "specVersion": 3,
     "basePath": "api/v1",
-    "tags": [],
+    "tags": [
+      "zod"
+    ],
     "contact": {
       "email": "louisandrew3@gmail.com",
       "name": "Louis Andrew",
@@ -23,9 +25,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
       "tsoa": [
         "node_modules/tsoa/dist"
       ],
