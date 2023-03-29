@@ -1,11 +1,10 @@
 import bodyParser from "body-parser";
-import { assert } from "console";
 import express, { NextFunction, Request, Response } from "express";
 import swaggerUi from "swagger-ui-express";
 import { ValidateError } from "tsoa";
 
 import { RegisterRoutes } from "./tsoa/routes.js";
-import swagger from "./tsoa/swagger.json" assert {type : "json"};
+import swagger from "./tsoa/swagger.json" assert { type: "json" };
 
 export const app = express();
 

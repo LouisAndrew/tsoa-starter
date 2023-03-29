@@ -19,6 +19,7 @@ specifiers:
   tsconfig-paths: 4.1.2
   tsoa: 5.1.1
   typescript: 5.0.2
+  zod: 3.21.4
 
 dependencies:
   '@tsoa/runtime': 5.0.0
@@ -26,6 +27,7 @@ dependencies:
   express: 4.18.2
   swagger-ui-express: 4.6.2_express@4.18.2
   tsoa: 5.1.1
+  zod: 3.21.4
 
 devDependencies:
   '@louisandrew3/eslint-config': 1.4.2_typescript@5.0.2
@@ -2847,3 +2849,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+    dev: false
